@@ -1,0 +1,90 @@
+@import '../../styles/config';
+
+.dob-selector {
+    display: flex;
+    justify-content: space-between;
+
+    .line-separator{
+        width: 10.77px;
+        border: none;
+        border-bottom: 2px solid $grey-light;
+        margin: 0 .6em;
+        padding: .7rem 0;
+    }
+
+    .dob-select {
+        font-size: 17px;
+        color: #444;
+        line-height: 1.3;
+        padding: .6em 1.8em .5em .8em;
+        border: 2px solid $grey-light;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        background-image: url('../../img/dropdown_arrow.svg');
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+        outline: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: 2px solid $purple-color;
+        }
+
+        &.form-input-error {
+            color: $danger-color;
+            border: 1px solid $danger-color !important;
+        }
+    }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .dob-selector {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: normal;
+        .for-day {
+            flex-grow: 1;
+            min-width: 52px;
+            margin: 0 4px 4px 0;
+        }
+        .for-month {
+            flex-grow: 1;
+            min-width: 52px;
+            margin: 0 4px 4px 0;
+        }
+        .for-year {
+            flex-grow: 1;
+            min-width: 52px;
+        }
+        .line-separator {
+            display: none;
+        }
+        .dob-select {
+            font-size: 17px;
+            padding: .6em .8em;
+            width: 100%;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .dob-selector {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .for-year {
+            flex: 1;
+            min-width: 25%;
+        }
+        .dob-select {
+            font-size: 17px;
+            width: 100%;
+        }
+    }
+ }

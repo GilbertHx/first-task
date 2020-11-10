@@ -1,0 +1,170 @@
+@import '../../styles/config';
+
+.Account {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    background: url('../../img/gredient.svg') no-repeat;
+    background-color: $dark-color;
+
+    .title {
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 48px;
+      margin: 0;
+      text-align: center;
+      padding-top: 56px;
+      color: $white-color;
+    }
+
+    .main-area {
+      width: 800px;
+      margin: 0 auto;
+      padding-top: 42px;
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .column-one {
+        width: 256px;
+        height:552px;
+        background: url('../../img/LayerOne.png') no-repeat;
+        background-color: $dark-color;
+        position: relative;
+
+        .lines-two {
+          background: url('../../img/LinesTwo.png') no-repeat;
+          position: absolute;
+          width: 244px;
+          height: 374px;
+          left: 12px;
+          top: 89px;
+        }
+      }
+
+      .column-three {
+        width: 72px;
+        height:552px;
+        position: relative;
+
+        p {
+          padding-left: 8px;
+          margin: 4px 0;
+          color: $white-color;
+          font-size: 11px;
+          line-height: 11px;
+        }
+
+        .first-sec {
+          position: absolute;
+          top: 99px;
+        }
+
+        .second-sec {
+          position: absolute;
+          top: 174px;
+        }
+
+        .third-sec {
+          position: absolute;
+          top: 255px;
+        }
+
+        .number-line {
+          width: 25px;
+          margin: 0;
+          border: 1px solid hsl(240, 20%, 25%);
+        }
+
+        .line-active {
+          width: 25px;
+          margin: 0;
+          border: 1px solid $highlight-green;
+        }
+      }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .Account {
+    background-image: url('../../img/gredient-small.svg'), url('../../img/LinesBottom.svg');
+    background-repeat: no-repeat; 
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    -moz-background-size: cover, contain;
+    -o-background-size: cover, contain;
+    background-size: cover, contain;
+    min-width: 100%;
+    min-height: 100%;
+    width:100%;
+    position: absolute;
+
+    .title {
+      font-weight: 300;
+      font-size: 48px;
+      margin: 0;
+      text-align: center;
+      padding-top: 22px;
+      font-style: normal;
+      font-size: 36.0347px;
+      line-height: 42px;
+    }
+
+    .main-area {
+      width: 90vw;
+      margin: 0 auto;
+      padding: 32px 0 42px 0;
+
+      .column-one {
+        display: none;
+      }
+
+      .column-three {
+        display: none;
+      }  
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+  .Account {
+    .main-area {
+      width: 500px;
+      margin: 0 auto;
+      padding: 32px 0 42px 0;
+
+      .column-one {
+        display: none;
+      }
+
+      .column-three {
+        display: none;
+      }  
+    }
+  }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .Account {
+
+    .main-area {
+      width: 70vw;
+      margin: 0 auto;
+
+      .column-one {
+        display: none;
+      }  
+      .column-three {
+        width: 5vw;
+      }
+    }
+  }
+ }
