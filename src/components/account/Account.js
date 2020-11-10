@@ -14,7 +14,7 @@ const Account = () => {
     }
 
     const prevStep = () => {
-        if(step ===0) {
+        if(step === 0) {
             setStep(2);
         } else {
             setStep(step-1);

@@ -31,12 +31,14 @@ export default function validateInfo(values) {
             errors.day = 'Invalid Date';
         } 
         else { 
-            if(values.month === "04" || values.month === "06" || values.month === "09" || values.month === "11" && values.day > 30) {
-                errors.day = 'Invalid Date';
+            if(values.month === "04" || values.month === "06" || values.month === "09" || values.month === "11") {
+                if(values.day > 30) {
+                    errors.day = 'Invalid Date';
+                }
             }
             if(values.month === "02" && values.day > 29) {
                 errors.day = 'Invalid Date';
-            } else if(values.year%4 != 0 && values.day > 28) {
+            } else if(values.year%4 !== 0 && values.day > 28) {
                     errors.day = 'Invalid Date';   
             }
         } 
