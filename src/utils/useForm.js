@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 const useForm = validate => {
     const [values, setValues] = useState({
@@ -12,7 +12,6 @@ const useForm = validate => {
 
     });
     const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
   
     const handleChange = e => {
       const { name, value } = e.target;
@@ -34,22 +33,11 @@ const useForm = validate => {
     function formatPhoneText(value){
       return value.replace(/\D/g, "").match(/.{1,3}/g)?.join(" ").substr(0, 11) || ""
     }
-
-  
     const handleSubmit = e => {
       e.preventDefault();
       setErrors(validate(values));
-      setIsSubmitting(true);
     };
-
-  useEffect(
-      () => {
-        if (Object.keys(errors).length === 0 && isSubmitting) {
-        }
-      },
-      [errors]
-    );
-  
+    
     return { handleChange, handleSubmit, values, errors };
   };
   

@@ -5,7 +5,7 @@ function PhoneNumberSelectorComponent ({handleChange, values, errors}) {
       <div className="country-code-selector">
         <div className="input-data c-cod ">
             <label htmlFor='mobile' className="form-label">Mobile</label>
-            <select name="country-code" tabIndex="2" name="prefix" required className={errors.prefix ? 'form-input country-code-select form-input-error': 'form-input country-code-select'} onChange={handleChange}>
+            <select tabIndex="2" name="prefix" required className={errors.prefix ? 'form-input country-code-select form-input-error': 'form-input country-code-select'} onChange={handleChange}>
                 <option data-country-code="PL" value="48">+48 (PL)</option>
                 <option data-country-code="RW" value="250">+250 (RW)</option>
                 <optgroup label="All countries">

@@ -34,10 +34,10 @@ const Account = () => {
                         <hr className="top-line"/>
                         {
 
-                            step == 0 ? 
+                            step ===0 ? 
                             // the component below will be replaced by the first step component
                             <PersonalInfoComponent/> :
-                            step  == 1 ? <PersonalInfoComponent/> :
+                            step  === 1 ? <PersonalInfoComponent/> :
                             // the component below will be replaced by the last step component
                             <PersonalInfoComponent/>
                         }
